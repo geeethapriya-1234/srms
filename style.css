@@ -1,0 +1,138 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(120deg,#d9e4ff,#fcecff);
+}
+
+.card {
+    width: 350px;
+    margin: 80px auto;
+    background: linear-gradient(90deg,#7f5af0,#2cb67d);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,.1);
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: none;
+    background: #f2f4ff;
+}
+/* Background Gradient */
+body{
+margin:0;
+padding:0;
+height:100vh;
+font-family: Arial, Helvetica, sans-serif;
+background: linear-gradient(135deg,#0d47a1,#00c853);
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+/* Login Card */
+.card{
+width:380px;
+background:white;
+padding:35px;
+border-radius:14px;
+box-shadow:0 10px 30px rgba(0,0,0,0.35);
+text-align:center;
+}
+
+/* Heading */
+.card h2{
+color:#0d47a1;
+margin-bottom:25px;
+font-size:22px;
+}
+
+/* Inputs */
+.card input{
+width:100%;
+padding:12px;
+margin:10px 0;
+border-radius:8px;
+border:1px solid #ccc;
+outline:none;
+font-size:15px;
+transition:0.3s;
+}
+
+/* Input Focus Effect */
+.card input:focus{
+border:1px solid #00c853;
+box-shadow:0 0 6px #00c853;
+}
+
+/* Button */
+.card button{
+width:100%;
+padding:12px;
+background: linear-gradient(45deg,#0d47a1,#00c853);
+border:none;
+color:white;
+font-size:16px;
+font-weight:bold;
+border-radius:8px;
+cursor:pointer;
+transition:0.3s;
+}
+
+/* Button Hover */
+.card button:hover{
+transform:scale(1.05);
+box-shadow:0 5px 15px rgba(0,0,0,0.4);
+}
+
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background: linear-gradient(90deg,#7f5af0,#2cb67d);
+    border: none;
+    color: white;
+    border-radius: 30px;
+    font-weight: bold;
+}
+/* Submit Button Style */
+input[type="submit"]{
+    background: linear-gradient(45deg, #28a745, #007bff);
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Hover effect */
+input[type="submit"]:hover{
+    background: linear-gradient(45deg, #007bff, #28a745);
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+/* Submit Button Style */
+input[type="submit"]{
+    background: linear-gradient(45deg, #28a745, #007bff);
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Hover effect */
+input[type="submit"]:hover{
+    background: linear-gradient(45deg, #007bff, #28a745);
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}

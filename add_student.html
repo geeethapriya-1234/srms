@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Add Student</title>
+
+```
+<style>
+    body{
+        font-family: Arial;
+        background:#f4f6f9;
+        text-align:center;
+        margin-top:50px;
+    }
+
+    .box{
+        width:420px;
+        margin:auto;
+        padding:25px;
+        background:white;
+        border-radius:12px;
+        box-shadow:0px 0px 12px gray;
+    }
+
+    input, select{
+        width:95%;
+        padding:10px;
+        margin-top:10px;
+        border-radius:6px;
+        border:1px solid #ccc;
+    }
+
+    button{
+        margin-top:18px;
+        padding:10px 20px;
+        background:#28a745;
+        color:white;
+        border:none;
+        border-radius:6px;
+        cursor:pointer;
+    }
+
+    button:hover{
+        background:#218838;
+    }
+
+    a{
+        text-decoration:none;
+        color:blue;
+    }
+</style>
+```
+
+</head>
+<body>
+
+<div class="box">
+    <h2>Add Student</h2>
+    <form method="POST" action="/add_student">
+
+```
+<label>Register Number</label>
+<input type="text" name="regno" required>
+
+<label>Student Name</label>
+<input type="text" name="name" required>
+
+
+<label>Department</label><br>
+    <select name="department" required>
+        {% for dept in departments %}
+            <option value="{{ dept[0] }}">{{ dept[1] }}</option>
+        {% endfor %}
+    </select>
+
+    <label>Semester</label><br>
+    <select name="semester" required>
+        {% for sem in semesters %}
+            <option value="{{ sem[0] }}">{{ sem[1] }}</option>
+        {% endfor %}
+    </select>
+
+
+<label>Password</label>
+<input type="password" name="password" required>
+
+<button type="submit">Add Student</button>
+```
+
+
+
+<br>
+<a href="{{ url_for('admin') }}">⬅ Back to Dashboard</a>
+```
+
+</div>
+
+</body>
+</html>

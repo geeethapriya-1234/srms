@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Results - {{ regno }}</title>
+    <style>
+        table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #2c5aa0; color: white; }
+        .cgpa { font-size: 24px; font-weight: bold; color: #2c5aa0; margin: 20px 0; }
+        .download-btn { 
+            background: linear-gradient(45deg, #2c5aa0, #00b894); 
+            color: white; 
+            padding: 12px 24px; 
+            text-decoration: none; 
+            border-radius: 5px; 
+            font-weight: bold;
+            margin: 10px;
+        }
+    </style>
+</head>
+<form method="POST">
+    Register Number:<br>
+    <input type="text" name="regno" required><br><br>
+
+    Password:<br>
+    <input type="password" name="password" required><br><br>
+
+    <button type="submit">Login</button>
+</form>
+
+<body>
+    <div class="container">
+        <h2>Semester {{ semester }} Results - {{ regno }}</h2>
+        
+        {% if message %}
+            <p>{{ message }}</p>
+        {% else %}
+            <table>
+                <tr>
+                    <th>Subject</th>
+                    <th>Total Marks</th>
+                    <th>Grade Point</th>
+                    <th>Percentage</th>
+                </tr>
+                {% for row in marks_data %}
+                <tr>
+                    <td>{{ row[0] }}</td>
+                    <td>{{ row[1] }}</td>
+                    <td>{{ row[2] }}</td>
+                    <td>{{ row[3] }}%</td>
+                </tr>
+                {% endfor %}
+            </table>
+            <div class="cgpa">CGPA: {{ cgpa }}</div>
+            
+            <!-- DOWNLOAD PDF BUTTON -->
+            <a href="/download_pdf/{{ session.student }}" class="download-btn">📄 DOWNLOAD PDF</a>
+        {% endif %}
+        
+        <br><br>
+        <a href="/student_dashboard">← Back to Dashboard</a>
+        <a href="/logout">Logout</a>
+    </div>
+</head>
+</html>

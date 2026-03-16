@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Student Dashboard - KVPT</title>
+    <style>
+        body{
+            font-family: Arial;
+            background:#f5f7fb;
+        }
+        .container{
+            width: 90%;
+            margin:auto;
+            margin-top:30px;
+        }
+        h2{
+            color:#2c5aa0;
+        }
+        table{
+            width:100%;
+            border-collapse: collapse;
+            margin-top:15px;
+            background:white;
+        }
+        th,td{
+            padding:12px;
+            border:1px solid #ddd;
+            text-align:center;
+        }
+        th{
+            background:#2c5aa0;
+            color:white;
+        }
+        .semester-box{
+            margin-top:35px;
+            padding:20px;
+            background:white;
+            border-radius:8px;
+            box-shadow:0 2px 8px rgba(0,0,0,0.08);
+        }
+        .cgpa{
+            font-size:20px;
+            font-weight:bold;
+            color:#0a7f5a;
+            margin-top:10px;
+        }
+        .overall{
+            font-size:24px;
+            font-weight:bold;
+            color:#d35400;
+            margin-top:40px;
+        }
+        button{
+            padding:10px 18px;
+            background:#2c5aa0;
+            color:white;
+            border:none;
+            border-radius:6px;
+            cursor:pointer;
+            margin-top:20px;
+        }
+        button:hover{
+            background:#1d3f73;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+<h2>Welcome {{ student_name }}</h2>
+
+{% if results %}
+
+```
+{% for sem, data in results.items() %}
+<div class="semester-box">
+
+    <h3>Semester {{ sem }}</h3>
+
+    <table>
+        <tr>
+            <th>Subject</th>
+            <th>Total Marks</th>
+            <th>Grade Point</th>
+            <th>Percentage</th>
+        </tr>
+
+        {% for r in data.subjects %}
+        <tr>
+            <td>{{ r[0] }}</td>
+            <td>{{ r[1] }}</td>
+            <td>{{ r[2] }}</td>
+            <td>{{ r[3] }}%</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+    <div class="cgpa">
+        Semester CGPA : {{ data.cgpa }}
+    </div>
+
+</div>
+{% endfor %}
+
+<div class="overall">
+    Overall CGPA : {{ overall_cgpa }}
+</div>
+
+<br>
+<a href="/download_pdf"><button>📄 Download Result PDF</button></a>
+<a href="/logout"><button>Logout</button></a>
+```
+
+{% else %} <h3>No Results Found</h3>
+{% endif %}
+
+</div>
+
+</body>
+</html>

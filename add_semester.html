@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Add Semester</title>
+
+```
+<style>
+    body{
+        font-family: Arial;
+        background:#eef2f7;
+        text-align:center;
+        margin-top:80px;
+    }
+
+    .box{
+        width:350px;
+        margin:auto;
+        padding:25px;
+        background:white;
+        border-radius:10px;
+        box-shadow:0px 0px 10px gray;
+    }
+
+    input{
+        width:90%;
+        padding:10px;
+        margin-top:10px;
+        border-radius:6px;
+        border:1px solid #ccc;
+    }
+
+    button{
+        margin-top:15px;
+        padding:10px 20px;
+        background:#2196F3;
+        color:white;
+        border:none;
+        border-radius:6px;
+        cursor:pointer;
+    }
+
+    button:hover{
+        background:#1976d2;
+    }
+
+    a{
+        text-decoration:none;
+        color:blue;
+    }
+</style>
+```
+
+</head>
+<body>
+
+<div class="box">
+    <h2>Add Semester</h2>
+
+```
+<form method="POST">
+    <label>Semester Name</label><br>
+    <input type="text" name="semester" placeholder="Example: Semester 1" required>
+
+    <br>
+    <button type="submit">Add Semester</button>
+</form>
+
+<br>
+<a href="{{ url_for('admin') }}">⬅ Back to Dashboard</a>
+
+```
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teacher Dashboard</title>
+</head>
+
+
+
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+
+
+<div class="container">
+
+
+
+<h3>Teacher Dashboard {{ teacher[0] }}</h3>
+<br>
+
+<hr>
+<h2>Add Student Marks</h2>
+
+<form method="POST">
+<input name="regno" placeholder="Register Number"><br>
+<input name="name" placeholder="Student Name"><br>
+<input name="dept" placeholder="Department"><br>
+<br>
+<body>
+    <label>Semester:</label>
+<select name="semester">
+    <option value="1">Sem 1</option>
+    <option value="2">Sem 2</option>
+    <option value="3">Sem 3</option>
+    <option value="4">Sem 4</option>
+    <option value="5">Sem 5</option>
+    <option value="6">Sem 6</option>
+</select>
+<br><br>
+{% if message %}
+<h3 style="color:red;">{{message}}</h3>
+{% endif %}
+<br>
+<form action="/teacher" method="POST">
+
+    S1<input type="number" name="s1"><br><br>
+
+    S2<input type="number" name="s2"><br><br>
+
+    S3<input type="number" name="s3"><br><br>
+
+    S4 <input type="number" name="s4"><br><br>
+    
+    S5 <input type="number" name="s5"><br><br>
+
+    <input type="submit" value="Submit">
+
+</form>
+
+
+</form>
+</div>
+
+
+</body>
+</html>
+
+
+

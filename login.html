@@ -1,0 +1,36 @@
+
+<div class="card">
+
+`<!DOCTYPE html>
+<html>
+<head>
+    <title>Kongu Velalar Polytechnic College</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .login-container { max-width: 400px; margin: 50px auto; padding: 30px; }
+        .student-link { text-align: center; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2 style="text-align: center; color: #2c5aa0;">KONGU VELALAR POLYTECHNIC COLLEGE</h2>
+        
+        <form method="POST">
+            <div>
+                <label>Username:</label><br>
+                <input type="text" name="username" required style="width:100%; padding:10px;">
+            </div>
+            <div style="margin-top:15px;">
+                <label>Password:</label><br>
+                <input type="password" name="password" required style="width:100%; padding:10px;">
+            </div>
+            <br>
+            <input type="submit" value="LOGIN" style="width:100%; padding:12px; background:linear-gradient(45deg, #2c5aa0, #00b894); color:white; border:none; font-size:16px;">
+        </form>
+        
+        <div class="student-link">
+            <p><a href="/student_login" style="color:#2c5aa0; font-weight:bold;">STUDENT LOGIN →</a></p>
+        </div>
+    </div>
+</body>
+</html>

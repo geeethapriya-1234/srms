@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Add Teacher</title>
+</head>
+<body>
+
+<h2>Add Teacher</h2>
+
+<form method="POST">
+
+```
+<label>Teacher Name:</label>
+<input type="text" name="name" required>
+<br><br>
+
+<label>Department:</label>
+<select name="department" required>
+    {% for dept in departments %}
+        <option value="{{ dept[0] }}">{{ dept[1] }}</option>
+    {% endfor %}
+</select>
+
+<br><br>
+<button type="submit">Add Teacher</button>
+```
+
+</form>
+
+
+<br>
+<a href="{{ url_for('admin') }}">⬅ Back to Dashboard</a>
+
+</body>
+</html>
